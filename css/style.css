@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1530px;
+  margin: auto;
+  padding: 0 10px;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+header {
+  padding: 50px 0;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-navigation nav {
+  display: flex;
+  gap: 40px;
+  border: 1px solid #1c1c1c;
+  padding: 15px 50px;
+  border-radius: 30px;
+}
+
+.main-navigation nav a {
+  transition: 0.3s;
+}
+
+.main-navigation nav a:hover {
+  color: #1f8053;
+}
+
+.secondary-cta-btn {
+  padding: 15px 20px;
+  border: 1px solid #1c1c1c;
+  border-radius: 30px;
+  transition: 0.3s;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+}
+
+.secondary-cta-btn:hover {
+  border-color: #1f8053;
+}
+
+.secondary-cta-btn:hover::before {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(31, 128, 83, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.secondary-cta-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.secondary-cta-btn img {
+  transform: rotate(-45deg);
+}
+
+.cta-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(31, 128, 83, 1) 0%,
+    rgba(0, 0, 0, 1) 50%
+  );
+
+  padding: 2px;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+.cta-btn .black-btn-bg {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: black;
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 rgba(31, 128, 83, 0.7);
+}
+
+.cta-btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(31, 128, 83, 1) 0%,
+    rgba(31, 128, 83, 1) 100%
+  );
+}
+
+.cta-btn:hover .black-btn-bg {
+  animation: pulse-shadow 3s infinite;
+}
+
+.btn-arrow-wrapper {
+  overflow: hidden;
+  width: 17px;
+  height: 17px;
+}
+
+.btn-arrow-wrapper img {
+  transform: translate(0, 0) rotate(-45deg);
+  transition: 0.3s;
+}
+
+a:hover .btn-arrow-wrapper img {
+  animation: arrow-moving 0.3s linear;
+}
